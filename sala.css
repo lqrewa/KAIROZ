@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  background: #f0f0f0;
+  height: 100vh;
+  display: flex;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 70px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.icon-btn {
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+}
+
+.icon-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ===== Conteúdo ===== */
+.conteudo {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+/* ===== Grade estilo Zoom ===== */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  flex: 1;
+  padding: 20px;
+}
+
+.user-box {
+  background: #ddd;
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 1px 1px 4px black;
+}
+
+.user-name {
+  background: rgba(0,0,0,0.5);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* ===== Chat ===== */
+.chat {
+  width: 300px;
+  background: white;
+  border-left: 2px solid #ddd;
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.chat-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.chat-body {
+  border: 1px solid #ccc;
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* ===== Tela de saída ===== */
+.exit-screen {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: white;
+  font-size: 32px;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.voltar-btn {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #444;
+  background: #eee;
+  padding: 10px 20px;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.voltar-btn:hover {
+  background: #ddd;
+}

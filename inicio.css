@@ -1,0 +1,339 @@
+/* FONTES */
+.patrick-hand-regular {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ============================
+      TEMA CLARO (PADRÃO)
+============================ */
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fce1e4, #e1f2fb, #fef6e4);
+  color: #333;
+}
+
+/* menu lateral com largura menor */
+.menu-lateral {
+  width: 180px; /* largura reduzida */
+  background: white;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;       /* encosta no canto */
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-size: 0;
+  line-height: 1;
+  background: linear-gradient(90deg, #ff9eb5, #a7e3ff, #ffd3b6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Letras */
+.titulo-kairoz span {
+  display: inline-block;
+  font-size: 26px;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+/* Cores das letras */
+.letra-k { color: #e4dcee; }
+.letra-a { color: #cbf2fc; }
+.letra-i { color: #f9ced1; }
+.letra-r { color: #feddbd; }
+.letra-o { color: #e4dcee; }
+.letra-z { color: #f9ced1; }
+
+.menu-lateral nav button,
+.menu-lateral nav summary {
+  background: none;
+  border: none;
+  color: #444;
+  font-size: 15px;
+  padding: 10px 0;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.menu-lateral nav button:hover,
+.menu-lateral nav summary:hover {
+  color: #ff7fa3;
+}
+
+.menu-lateral nav button.ativo {
+  color: #ff7fa3;
+  font-weight: 600;
+}
+
+details ul {
+  list-style: none;
+  margin-left: 10px;
+}
+
+details ul li button {
+  font-size: 14px;
+  color: #666;
+  padding: 5px 0;
+}
+
+/* main ajustado à nova largura */
+main {
+  margin-left: 180px; /* ajusta ao tamanho da barra */
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 180px);
+  min-height: 100vh;
+}
+
+.materias {
+  padding: 30px 40px;
+}
+
+.materias h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.cards-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+.card {
+  flex: 0 0 160px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 20px;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: #ff9eb520;
+  transform: translateY(-3px);
+}
+
+.conteudo-materia {
+  background: #fff;
+  margin: 0 40px 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px 30px;
+}
+
+.banner h2 {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+footer {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.acessibilidade button {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  transition: 0.3s;
+}
+
+.acessibilidade button:hover {
+  color: #ff7fa3;
+}
+
+/* ============================
+      TEMA ESCURO
+============================ */
+
+body.escuro {
+  background: linear-gradient(135deg, #1c2630, #21283a, #322d46, #3f374e);
+  color: #eee;
+}
+
+body.escuro .menu-lateral {
+  width: 180px;
+  background: #1d1d1d;
+  border-right: 1px solid #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+body.escuro .menu-lateral nav button,
+body.escuro .menu-lateral nav summary {
+  color: #ddd;
+}
+
+body.escuro .menu-lateral nav button:hover {
+  color: #635172;
+}
+
+body.escuro .menu-lateral nav button.ativo {
+  color: #635172;
+}
+
+body.escuro .titulo-kairoz .letra-k { color: #594e6e; }
+body.escuro .titulo-kairoz .letra-a { color: #584f7a; }
+body.escuro .titulo-kairoz .letra-i { color: #3e4c6d; }
+body.escuro .titulo-kairoz .letra-r { color: #3c4969; }
+body.escuro .titulo-kairoz .letra-o { color: #435b72; }
+body.escuro .titulo-kairoz .letra-z { color: #36485a; }
+
+body.escuro .card {
+  background: #1d1d1d;
+  color: #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+body.escuro .card:hover {
+  background: #635172;
+}
+
+body.escuro .conteudo-materia {
+  background: #1d1d1d;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+body.escuro .banner h2 {
+  color: #eee;
+}
+
+body.escuro footer {
+  background: #1d1d1d;
+  color: #fff;
+  border-top: 1px solid #444;
+}
+
+body.escuro .acessibilidade button {
+  color: #ddd;
+}
+
+body.escuro .acessibilidade button:hover {
+  color: #635172;
+}
+
+/* ============================
+      TEMA ALTO CONTRASTE
+============================ */
+
+body.alto-contraste {
+  background: #000;
+  color: #fff;
+}
+
+body.alto-contraste .menu-lateral {
+  width: 180px;
+  background: #000;
+  border-right: 2px solid yellow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+body.alto-contraste .titulo-kairoz span {
+  color: yellow;
+}
+
+body.alto-contraste .menu-lateral nav button,
+body.alto-contraste .menu-lateral nav summary {
+  color: yellow;
+}
+
+body.alto-contraste .menu-lateral nav button:hover,
+body.alto-contraste .menu-lateral nav button.ativo {
+  color: white;
+}
+
+body.alto-contraste .card {
+  background: #000;
+  border: 2px solid yellow;
+  color: yellow;
+}
+
+body.alto-contraste .card:hover {
+  background: yellow;
+  color: black;
+}
+
+body.alto-contraste .conteudo-materia {
+  background: #000;
+  border: 2px solid yellow;
+}
+
+body.alto-contraste .banner h2 {
+  color: yellow;
+}
+
+body.alto-contraste footer {
+  background: #000;
+  color: yellow;
+}
+
+body.alto-contraste .acessibilidade button {
+  color: yellow;
+}
+
+body.alto-contraste .acessibilidade button:hover {
+  color: white;
+}
+
+/* RESPONSIVIDADE (mantida) */
+@media (max-width: 768px) {
+  .menu-lateral {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .materias {
+    padding: 20px;
+  }
+
+  .conteudo-materia {
+    margin: 20px;
+  }
+}

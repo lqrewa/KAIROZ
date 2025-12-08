@@ -1,0 +1,276 @@
+/* ==========================
+   FONTE E ESTILO GERAL
+   ========================== */
+body {
+  background: linear-gradient(135deg, #fce1e4, #e1f2fb, #fef6e4);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-family: "Patrick Hand", cursive;
+  color: #444;
+  position: relative;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 30px auto;
+  display: flex;
+  gap: 25px;
+}
+
+/* ==========================
+   BOTÃO VOLTAR
+   ========================== */
+.back-button {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  padding: 8px 12px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.2s, color 0.2s;
+  z-index: 1000;
+}
+
+.back-button:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+/* ==========================
+   SEÇÃO DE BATE-PAPO
+   ========================== */
+.chat-section {
+  flex: 2;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.chat-section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.groups {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.group {
+  min-width: 80px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.group:hover {
+  background: #ff9eb5;
+  color: white;
+}
+
+.group img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.group span {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* CARTÕES DE CONVERSA */
+.conversations {
+  margin-top: 20px;
+}
+
+.chat-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+.chat-card:hover {
+  background: #ffe2eb;
+}
+
+.chat-card img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.chat-card strong {
+  font-size: 16px;
+}
+
+.chat-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.time {
+  margin-left: auto;
+  font-size: 13px;
+  color: #888;
+}
+
+/* ==========================
+   SEÇÃO DE AJUDA ESCOLAR
+   ========================== */
+.help-section {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.help-section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.subject-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.subject {
+  padding: 12px;
+  border-radius: 12px;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subject:hover {
+  background: #cbeeff;
+}
+
+.accessibility {
+  margin-top: 20px;
+  width: 100%;
+  background: #ff9eb5;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.accessibility:hover {
+  background: #ff7fa3;
+}
+
+/* ==========================
+   RESPONSIVO
+   ========================== */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .groups {
+    justify-content: flex-start;
+  }
+}
+
+/* ==========================
+   TEMA ESCURO
+   ========================== */
+body.escuro {
+  background: linear-gradient(135deg, #1C2630,#21283a, #322d46, #3f374e);
+  color: #eee;
+}
+
+body.escuro .chat-section,
+body.escuro .help-section {
+  background: #1d1d1d;
+  color: #eee;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+body.escuro .group,
+body.escuro .chat-card,
+body.escuro .subject {
+  background: #252525;
+  color: #eee;
+}
+
+body.escuro .accessibility {
+  background: #635172;
+}
+
+body.escuro .accessibility:hover {
+  background: #7c628e;
+}
+
+/* ==========================
+   ALTO CONTRASTE
+   ========================== */
+body.alto-contraste {
+  background: #000;
+  color: yellow;
+}
+
+body.alto-contraste .chat-section,
+body.alto-contraste .help-section {
+  background: #000;
+  border: 2px solid yellow;
+}
+
+body.alto-contraste .group,
+body.alto-contraste .chat-card,
+body.alto-contraste .subject {
+  background: black;
+  border: 2px solid yellow;
+  color: yellow;
+}
+
+body.alto-contraste .accessibility {
+  background: yellow;
+  color: black;
+}
+
+body.alto-contraste .accessibility:hover {
+  background: white;
+  color: black;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAIROZ - Mural de Ajuda</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="muraldeajuda.css">
+  <script defer src="tema.js"></script>
+</head>
+<body>
+  
+ <header>
+  <div class="topo-esquerdo">
+    <a href="inicio.html" class="seta-voltar">
+      <span class="material-icons">arrow_back</span>
+    </a>
+
+    <div class="logo titulo-kairoz">
+      <span class="letra-k">K</span>
+      <span class="letra-a">A</span>
+      <span class="letra-i">I</span>
+      <span class="letra-r">R</span>
+      <span class="letra-o">O</span>
+      <span class="letra-z">Z</span>
+    </div>
+  </div>
+
+  <nav>
+    <a href="inicio.html">Início</a>
+    <a href="colegas.html">Colegas</a>
+    <a href="sala.html">Sala de Aula</a>
+    <a href="professores.html">Professores</a>
+    <a href="#" class="ativo">Ajuda</a>
+  </nav>
+</header>
+
+
+</header>
+
+
+  <main>
+    <h1>Mural de Ajuda</h1>
+    <p class="descricao">Um espaço para compartilhar pedidos e ofertas de apoio na inclusão escolar 💬</p>
+
+   
+    <section class="nova-postagem">
+      <h2>Nova Postagem</h2>
+      <form>
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+
+        <label for="funcao">Função</label>
+        <select id="funcao">
+          <option>Professor(a)</option>
+          <option>Família</option>
+          <option>Estudante</option>
+          <option>Terapeuta</option>
+          <option>Outro</option>
+        </select>
+
+        <label for="tipo">Tipo de Postagem</label>
+        <select id="tipo">
+          <option>Pedir ajuda</option>
+          <option>Oferecer ajuda</option>
+        </select>
+
+        <label for="categoria">Categoria</label>
+        <input type="text" id="categoria" placeholder="Ex: Dislexia, Autismo, Braille...">
+
+        <label for="mensagem">Descrição</label>
+        <textarea id="mensagem" rows="4" placeholder="Descreva o pedido ou oferta de ajuda..."></textarea>
+
+        <button type="submit">
+          <span class="material-icons">send</span> Publicar
+        </button>
+      </form>
+    </section>
+
+    
+    <section class="filtros">
+      <div class="campo-busca">
+        <span class="material-icons">search</span>
+        <input type="text" placeholder="Buscar por palavra-chave...">
+      </div>
+
+      <select>
+        <option>Todos os temas</option>
+        <option>Autismo</option>
+        <option>TDAH</option>
+        <option>Deficiência Visual</option>
+        <option>Comunicação Alternativa</option>
+      </select>
+    </section>
+
+    
+    <section class="mural">
+
+      <!-- 1º Post -->
+      <div class="post-card">
+        <div class="perfil">
+          <span class="material-icons perfil-icon">account_circle</span>
+          <div>
+            <h3>Rafael Lima • Professor</h3>
+            <p class="categoria">#TDAH #OrganizaçãoEscolar</p>
+          </div>
+        </div>
+
+        <p class="mensagem">
+          Estou procurando jogos educativos adaptados para alunos com TDAH. Alguém tem sugestões ou materiais?
+        </p>
+
+        <div class="acoes">
+          <button><span class="material-icons">chat</span> Responder</button>
+          <button><span class="material-icons">volunteer_activism</span> Quero ajudar</button>
+          <button><span class="material-icons">favorite</span> Curtir</button>
+        </div>
+      </div>
+
+      <!-- 2º Post -->
+      <div class="post-card oferta">
+        <div class="perfil">
+          <span class="material-icons perfil-icon">account_circle</span>
+          <div>
+            <h3>Luciana Torres • Terapeuta</h3>
+            <p class="categoria">#ComunicaçãoAlternativa #Autismo</p>
+          </div>
+        </div>
+
+        <p class="mensagem">
+          Tenho modelos de cartões de comunicação alternativa (PECS) prontos para impressão. Posso compartilhar!
+        </p>
+
+        <div class="acoes">
+          <button><span class="material-icons">chat</span> Responder</button>
+          <button><span class="material-icons">thumb_up</span> Tenho o mesmo interesse</button>
+          <button><span class="material-icons">favorite</span> Curtir</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>

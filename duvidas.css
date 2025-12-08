@@ -1,0 +1,359 @@
+/* ------------------------------
+      FONTES
+------------------------------ */
+.patrick-hand-regular {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ------------------------------
+      TEMA CLARO
+------------------------------ */
+body {
+  background: linear-gradient(135deg, #fce1e4, #e1f2fb, #fef6e4);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff9eb5, #a7e3ff, #ffd3b6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: #ff7fa3;
+  text-decoration: underline;
+}
+
+/* MAIN */
+main {
+  flex: 1;
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #444;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.descricao {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* FILTROS */
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filtros input,
+.filtros select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* FAQ */
+.faq-item {
+  background: white;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.pergunta {
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  border: none;
+  background: #fff;
+  color: #444;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.pergunta:hover,
+.pergunta.ativo {
+  background: #ffeff3;
+  color: #ff7fa3;
+}
+
+.resposta {
+  display: none;
+  padding: 15px;
+  color: #555;
+  font-size: 14px;
+}
+
+.feedback {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #777;
+}
+
+.feedback button {
+  background: none;
+  border: 1px solid #ff9eb5;
+  color: #ff7fa3;
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+.feedback button:hover {
+  background: #ff9eb5;
+  color: white;
+}
+
+/* SUPORTE */
+.contato-suporte {
+  text-align: center;
+  margin-top: 30px;
+  color: #555;
+}
+
+.contato-suporte a {
+  color: #ff7fa3;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contato-suporte a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
+
+.acessibilidade button {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  transition: 0.3s;
+}
+
+.acessibilidade button:hover {
+  color: #ff7fa3;
+}
+
+/* ------------------------------
+      TEMA ESCURO
+------------------------------ */
+body.escuro {
+  background: linear-gradient(135deg, #1c2630, #21283a, #322d46, #3f374e);
+  color: #eee;
+}
+
+body.escuro header {
+  background: #1d1d1d;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+body.escuro nav a {
+  color: #eee;
+}
+
+body.escuro nav a:hover,
+body.escuro nav a.ativo {
+  color: #635172;
+}
+
+/* logo escura */
+body.escuro .logo {
+  background: linear-gradient(90deg, #9a82b8, #9f97c2, #c77eb5, #dbae6a);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* filtros */
+body.escuro .filtros input,
+body.escuro .filtros select {
+  background: #1d1d1d;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+/* FAQ */
+body.escuro .faq-item {
+  background: #1d1d1d;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+}
+
+body.escuro .pergunta {
+  background: #1d1d1d;
+  color: #eee;
+  border-bottom: 1px solid #333;
+}
+
+body.escuro .pergunta:hover,
+body.escuro .pergunta.ativo {
+  background: #635172;
+}
+
+body.escuro .resposta {
+  color: #ddd;
+}
+
+body.escuro .feedback {
+  color: #bbb;
+}
+
+body.escuro .feedback button {
+  border-color: #635172;
+  color: #c9a8df;
+}
+
+body.escuro .feedback button:hover {
+  background: #635172;
+  color: white;
+}
+
+/* footer */
+body.escuro footer {
+  background: #1d1d1d;
+  color: #eee;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.6);
+}
+
+body.escuro .acessibilidade button {
+  color: #ddd;
+}
+
+body.escuro .acessibilidade button:hover {
+  color: #635172;
+}
+
+/* ------------------------------
+      ALTO CONTRASTE
+------------------------------ */
+body.alto-contraste {
+  background: #000;
+  color: #fff;
+}
+
+body.alto-contraste header,
+body.alto-contraste footer {
+  background: #000;
+  border-bottom: 2px solid yellow;
+}
+
+body.alto-contraste nav a {
+  color: yellow !important;
+}
+
+body.alto-contraste nav a:hover,
+body.alto-contraste nav a.ativo {
+  color: white !important;
+}
+
+body.alto-contraste .logo {
+  color: yellow !important;
+  background: none;
+  -webkit-background-clip: initial;
+}
+
+/* filtros */
+body.alto-contraste .filtros input,
+body.alto-contraste .filtros select {
+  background: #000;
+  border: 2px solid yellow;
+  color: yellow;
+}
+
+/* FAQ */
+body.alto-contraste .faq-item {
+  background: #000;
+  border: 2px solid yellow;
+}
+
+body.alto-contraste .pergunta {
+  background: #000;
+  color: yellow;
+  border-bottom: 2px solid yellow;
+}
+
+body.alto-contraste .pergunta:hover,
+body.alto-contraste .pergunta.ativo {
+  background: yellow;
+  color: black;
+}
+
+body.alto-contraste .resposta {
+  color: yellow;
+}
+
+body.alto-contraste .feedback {
+  color: white;
+}
+
+body.alto-contraste .feedback button {
+  border: 2px solid yellow;
+  color: yellow;
+}
+
+body.alto-contraste .feedback button:hover {
+  background: yellow;
+  color: black;
+}
+
+body.alto-contraste .contato-suporte a {
+  color: yellow;
+}
+
+/* ------------------------------
+      RESPONSIVO
+------------------------------ */
+@media (max-width: 600px) {
+  .filtros {
+    flex-direction: column;
+  }
+}

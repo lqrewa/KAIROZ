@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAIROZ - Dúvidas Frequentes</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="duvidas.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script defer src="tema.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">KAIROZ</div>
+    <nav>
+      <a href="inicio.html">Início</a>
+      <a href="colegas.html">Colegas</a>
+      <a href="sala.html">Sala de Aula</a>
+      <a href="professores.html">Professores</a>
+      <a href="#" class="ativo">Dúvidas</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Dúvidas Frequentes</h1>
+    <p class="descricao">Aqui você encontra respostas rápidas sobre acessibilidade, comunicação e o uso da plataforma 🌈</p>
+
+    
+    <section class="filtros">
+      <input type="text" id="busca" placeholder="🔍 Buscar por palavra-chave...">
+      <select id="categoria">
+        <option>Todas as categorias</option>
+        <option>Acessibilidade</option>
+        <option>Comunicação</option>
+        <option>Plataforma</option>
+        <option>Cadastro</option>
+      </select>
+    </section>
+
+    
+    <section class="faq">
+      <div class="faq-item" data-categoria="Acessibilidade">
+        <button class="pergunta">Como posso aumentar o contraste da página?</button>
+        <div class="resposta">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu sapien nec mauris laoreet tincidunt. Curabitur sit amet orci ac nulla commodo vehicula.</p>
+          <div class="feedback">
+            <span>Esta resposta foi útil?</span>
+            <button>👍 Sim</button>
+            <button>👎 Não</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-categoria="Comunicação">
+        <button class="pergunta">Como enviar uma mensagem para um professor?</button>
+        <div class="resposta">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat, orci in fermentum tincidunt, velit metus commodo erat, in vehicula sem quam vel lorem.</p>
+          <div class="feedback">
+            <span>Esta resposta foi útil?</span>
+            <button>👍 Sim</button>
+            <button>👎 Não</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-categoria="Plataforma">
+        <button class="pergunta">Posso acessar o mural de ajuda pelo celular?</button>
+        <div class="resposta">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae felis id mi gravida volutpat. Integer ut ligula quis orci tristique faucibus.</p>
+          <div class="feedback">
+            <span>Esta resposta foi útil?</span>
+            <button>👍 Sim</button>
+            <button>👎 Não</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-categoria="Cadastro">
+        <button class="pergunta">Como faço para me cadastrar como terapeuta?</button>
+        <div class="resposta">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquam, ex a finibus egestas, lectus ex euismod nulla, vel egestas lacus libero nec velit.</p>
+          <div class="feedback">
+            <span>Esta resposta foi útil?</span>
+            <button>👍 Sim</button>
+            <button>👎 Não</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="contato-suporte">
+      <p>❓ Ainda ficou com dúvidas? <a href="contato.html">Fale com o suporte escolar</a>.</p>
+    </section>
+  </main>
+
+  <script>
+    
+    const perguntas = document.querySelectorAll('.pergunta');
+    perguntas.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('ativo');
+        const resposta = btn.nextElementSibling;
+        resposta.style.display = resposta.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    
+    const filtro = document.getElementById('categoria');
+    filtro.addEventListener('change', () => {
+      const categoria = filtro.value;
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.style.display = (categoria === "Todas as categorias" || item.dataset.categoria === categoria) ? "block" : "none";
+      });
+    });
+
+    
+    const busca = document.getElementById('busca');
+    busca.addEventListener('input', () => {
+      const termo = busca.value.toLowerCase();
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const texto = item.textContent.toLowerCase();
+        item.style.display = texto.includes(termo) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>

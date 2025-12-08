@@ -1,0 +1,230 @@
+.patrick-hand-regular {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Fundo */
+.fundo-animado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fce1e4, #e1f2fb, #fef6e4, #ffe5d9);
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Menu superior */
+.menu-superior {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.menu-superior nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-btn {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #444;
+  font-weight: 500;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav-btn:hover {
+  background: #ff9eb5;
+  color: white;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  background: white;
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  color: #333;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  max-width: 200px;
+  text-align: center;
+  z-index: 10;
+}
+
+.tooltip.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Corpo principal */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* separa login à esquerda e KAIROZ à direita */
+  height: 100vh;
+  padding: 40px;
+}
+
+/* Caixa de login */
+.login-box {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  order: 1; /* garante que fique à esquerda */
+}
+
+/* Lado direito - KAIROZ */
+.info-box {
+  font-family: "Montserrat", "Patrick Hand", cursive;
+  font-size: 60px;
+  color: white;
+  font-weight: 900;
+  text-shadow: 0 2px 6px rgba(150, 170, 200, 0.4);
+  text-align: right; /* texto alinhado à direita */
+  order: 2; /* garante que fique à direita */
+  width: 50%;
+}
+
+
+.login-box h2 {
+  color: #444;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.btn-principal {
+  background: #ff9eb5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.btn-principal:hover {
+  background: #ff7fa3;
+}
+
+.btn-alternar {
+  margin-top: 5px;
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.btn-alternar:hover {
+  color: #ff7fa3;
+}
+
+/* Lado direito - KAIROZ */
+.info-box {
+  font-family: "Montserrat", cursive;
+  font-size: 60px;
+  color: white;
+  font-weight: 900;
+  text-shadow: 0 2px 6px rgba(150, 170, 200, 0.4);
+  text-align: right;
+  order: 2;
+  width: 50%;
+}
+
+.titulo-kairoz {
+  font-size: 0; /* remove o espaço entre spans */
+}
+
+.titulo-kairoz span {
+  display: inline-block;
+  font-size: 90px; /* restaura o tamanho original da fonte */
+  line-height: 1;
+  text-shadow: white 0px 0px 8px;
+}
+
+.letra-k { color: #e4dcee; }
+.letra-a { color: #cbf2fc; }
+.letra-i { color: #f9ced1; }
+.letra-r { color: #feddbd; }
+.letra-o { color: #e4dcee; }
+.letra-z { color: #f9ced1; }
+
+
+/* Subtítulo abaixo de KAIROZ */
+.info-box p {
+  font-family: "Patrick Hand", cursive; /* mesma fonte da caixinha de login */
+  font-size: 22px;
+  color: #e4dcee;
+  margin-top: 5px; /* aproxima mais do título */
+  text-shadow: white 0px 0px 8px;
+}
+
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .info-box {
+    padding: 0;
+    font-family: 
+  }
+
+  .info-box h1 {
+    font-size: 48px;
+  }
+
+  .menu-superior {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .tooltip {
+    display: none;
+  }
+}

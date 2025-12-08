@@ -1,0 +1,62 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAIROZ - Boas-vindas</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="fundo-animado"></div>
+
+  <!-- Seção inicial -->
+  <section class="intro" id="topo">
+    <h1 class="titulo">KAIROZ</h1>
+    <p class="subtitulo">Um espaço para colaboração, inclusão e aprendizado compartilhado</p>
+    <a href="#sobre" class="scroll-btn">Saiba mais ↓</a>
+  </section>
+
+  <!-- Seção com bonequinhos e textos -->
+  <section class="sobre" id="sobre">
+    <div class="bloco impar">
+      <img src="todosjuntos_20251108133220.png" alt="bonequinhos" class="bonecos">
+      <p>O <strong>KAIROZ</strong> conecta professores, famílias e estudantes para trocar experiências incriveís! </p>
+    </div>
+
+    <div class="bloco par">
+      <img src="todosjuntos_20251108133220.png" alt="bonequinhos" class="bonecos">
+      <p>Compartilhe recursos, ideias e boas práticas para um ambiente mais tagarela. </p>
+    </div>
+
+    <div class="bloco impar">
+      <img src="todosjuntos_20251108133220.png" alt="bonequinhos" class="bonecos">
+      <p>A comunidade cresce com sua contribuição: seus materiais, dicas e experiências ajudam outros educadores e famílias. </p>
+    </div>
+
+    <div class="bloco par">
+      <img src="todosjuntos_20251108133220.png" alt="bonequinhos" class="bonecos">
+      <p>Participe! Crie conexões, inspire-se e descubra novas formas de apoiar o aprendizado. </p>
+    </div>
+  </section>
+
+  <!-- Botão final -->
+  <section class="final">
+    <a href="login.html" class="botao-entre">Vamos dar uma olhada?</a>
+  </section>
+
+  <script>
+    // Rolagem suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

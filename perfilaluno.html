@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAIROZ - Perfil Aluno</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="perfilaluno.css">
+  <script defer src="tema.js"></script>
+</head>
+
+<body>
+<header class="topo">
+  <a href="inicio.html" class="voltar">
+    <span class="material-icons">arrow_back</span>
+  </a>
+  <h2>Perfil</h2>
+</header>
+
+
+  <!-- FOTO DE CAPA + ÍCONE -->
+  <div class="capa">
+    <img id="banner-img" src="" alt="Foto de capa do usuário">
+    <span id="edit-banner-icon" class="edit-icon">🖼️</span>
+    <input type="file" id="banner-input" accept="image/*" hidden>
+  </div>
+
+  <div class="layout">
+    <section class="coluna-esquerda">
+      <section class="perfil">
+        <!-- FOTO DE PERFIL + ÍCONE -->
+        <div class="perfil-topo">
+          <img id="foto-perfil-img" class="foto-perfil" src="" alt="Foto de perfil">
+          <span id="edit-pfp-icon" class="edit-icon">📷</span>
+          <input type="file" id="pfp-input" accept="image/*" hidden>
+          <button id="btn-editar" class="editar">✏️ Editar perfil</button>
+        </div>
+
+        <!-- INFORMAÇÕES -->
+        <div class="info">
+          <h1>Você <span class="verificado">✔️</span></h1>
+          <p class="usuario">@eu</p>
+          <p class="funcao">Aluno • 3º Ano</p>
+          <p class="bio">No bio wet</p>
+          <p class="entrada">Entrou em março de 2024</p>
+        </div>
+
+        <div class="estatisticas">
+          <span><strong>0</strong> Publicações</span>
+          <span><strong>0</strong> Seguindo</span>
+          <span><strong>0</strong> Seguidores</span>
+        </div>
+
+        <!-- ABAS -->
+        <nav class="abas">
+          <button class="ativo">Publicações</button>
+          <button>Respostas</button>
+          <button>Mídias</button>
+          <button>Curtidas</button>
+        </nav>
+
+        <!-- PUBLICAÇÕES -->
+        <section class="publicacoes">
+          <p class="sem-publicacoes">Ainda não há publicações.</p>
+        </section>
+      </section>
+    </section>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="card-sidebar"><h3>Informação 1</h3><p>Sem dados ainda. Não seja timido!</p></div>
+      <div class="card-sidebar"><h3>Informação 2</h3><p>Sem dados ainda. Não seja timido!</p></div>
+      <div class="card-sidebar"><h3>Informação 3</h3><p>Sem dados ainda. Não seja timido!</p></div>
+      <div class="card-sidebar"><h3>Informação 4</h3><p>Sem dados ainda. Não seja timido!</p></div>
+    </aside>
+  </div>
+
+  <script>
+    // ======== CARREGAR IMAGENS SALVAS E NOME ========
+    window.onload = function () {
+      const bannerSaved = localStorage.getItem("banner-img");
+      const pfpSaved = localStorage.getItem("pfp-img");
+      const nomeSalvo = localStorage.getItem("usuario-nome");
+
+      document.getElementById("banner-img").src =
+        bannerSaved || "https://img.freepik.com/fotos-premium/parede-de-gesso-cinza-branco-claro-de-fundo-longa-em-formato-web-panoramico-e-cabecalho_100800-16126.jpg";
+
+      document.getElementById("foto-perfil-img").src =
+        pfpSaved || "https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg";
+
+      // Preencher nome
+      const nomeElemento = document.querySelector(".usuario");
+      nomeElemento.textContent = nomeSalvo ? "@" + nomeSalvo : "@eu";
+
+      // Atualizar "Você" na sala
+      const user1 = document.getElementById("usuario-1");
+      if (user1 && nomeSalvo) {
+        user1.querySelector(".user-name").textContent = nomeSalvo;
+      }
+    };
+
+    // ===================== EDITAR MODO =====================
+    let editando = false;
+
+    const btnEditar = document.getElementById("btn-editar");
+    const iconBanner = document.getElementById("edit-banner-icon");
+    const iconPfp = document.getElementById("edit-pfp-icon");
+
+    btnEditar.addEventListener("click", () => {
+      editando = !editando;
+
+      const nomeElemento = document.querySelector(".usuario");
+
+      if (editando) {
+        btnEditar.textContent = "Pronto!";
+        iconBanner.style.display = "block";
+        iconPfp.style.display = "block";
+
+        // Transformar nome em input editável
+        const nomeAtual = nomeElemento.textContent.replace("@", "");
+        const inputNome = document.createElement("input");
+        inputNome.type = "text";
+        inputNome.id = "input-nome";
+        inputNome.value = nomeAtual;
+        inputNome.placeholder = "Digite seu nome de usuário";
+        nomeElemento.replaceWith(inputNome);
+      } else {
+        btnEditar.textContent = "✏️ Editar perfil";
+        iconBanner.style.display = "none";
+        iconPfp.style.display = "none";
+
+        // Salvar nome no localStorage e voltar para texto normal
+        const inputNome = document.getElementById("input-nome");
+        const nomeNovo = inputNome.value.trim() || "eu";
+        localStorage.setItem("usuario-nome", nomeNovo);
+
+        const novoElemento = document.createElement("p");
+        novoElemento.className = "usuario";
+        novoElemento.textContent = "@" + nomeNovo;
+        inputNome.replaceWith(novoElemento);
+
+        // Atualizar na sala se aberto
+        const user1 = document.getElementById("usuario-1");
+        if (user1) {
+          user1.querySelector(".user-name").textContent = nomeNovo;
+        }
+      }
+    });
+
+    // ===================== ALTERAR BANNER =====================
+    const bannerInput = document.getElementById("banner-input");
+    iconBanner.addEventListener("click", () => bannerInput.click());
+
+    bannerInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = document.getElementById("banner-img");
+          img.src = e.target.result;
+          localStorage.setItem("banner-img", e.target.result);
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // ===================== ALTERAR FOTO PERFIL =====================
+    const pfpInput = document.getElementById("pfp-input");
+    iconPfp.addEventListener("click", () => pfpInput.click());
+
+    pfpInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = document.getElementById("foto-perfil-img");
+          img.src = e.target.result;
+          localStorage.setItem("pfp-img", e.target.result);
+
+          // Atualizar na sala se aberto
+          const user1 = document.getElementById("usuario-1");
+          if (user1) {
+            user1.style.backgroundImage = `url('${e.target.result}')`;
+          }
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+</body>
+</html>

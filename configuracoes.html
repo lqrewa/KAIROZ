@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAIROZ - Configurações</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="configuracoes.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script defer src="tema.js"></script> <!-- JS do tema -->
+</head>
+
+<body>
+  <header>
+    <div class="logo titulo-kairoz">
+      <span class="letra-k">K</span>
+      <span class="letra-a">A</span>
+      <span class="letra-i">I</span>
+      <span class="letra-r">R</span>
+      <span class="letra-o">O</span>
+      <span class="letra-z">Z</span>
+    </div>
+
+    <nav>
+      <a href="inicio.html">Início</a>
+      <a href="colegas.html">Colegas</a>
+      <a href="sala.html">Sala de Aula</a>
+      <a href="professores.html">Professores</a>
+      <a href="#" class="ativo">Configurações</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Configurações do Usuário</h1>
+    <p class="descricao">Personalize sua experiência e torne o ambiente mais acessível e confortável para você.</p>
+
+    <section class="configuracoes">
+      
+      <div class="categoria">
+        <h2>Acessibilidade</h2>
+
+        <div class="opcao">
+          <label for="fonte">Tamanho da Fonte:</label>
+          <input type="range" id="fonte" min="14" max="24" value="16">
+        </div>
+
+        <div class="opcao">
+          <label for="tema">Tema do Site:</label>
+          <select id="tema">
+            <option value="claro">Claro</option>
+            <option value="escuro">Escuro</option>
+            <option value="alto-contraste">Alto Contraste</option>
+          </select>
+        </div>
+
+        <div class="opcao">
+          <label for="voz">Leitura em voz alta:</label>
+          <input type="checkbox" id="voz">
+        </div>
+
+        <div class="opcao">
+          <label for="idioma">Idioma da Interface:</label>
+          <select id="idioma">
+            <option>Português (BR)</option>
+            <option>Inglês (EN)</option>
+            <option>Libras (vídeo)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h2>Notificações</h2>
+        <div class="opcao">
+          <label for="emailNotif">Receber notificações por e-mail:</label>
+          <input type="checkbox" id="emailNotif" checked>
+        </div>
+
+        <div class="opcao">
+          <label for="msgNotif">Mensagens internas:</label>
+          <input type="checkbox" id="msgNotif" checked>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h2>Perfil</h2>
+        <div class="opcao">
+          <label>Foto de Perfil:</label>
+          <input type="file" accept="image/*">
+        </div>
+
+        <div class="opcao">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" placeholder="Digite seu nome">
+        </div>
+
+        <div class="opcao">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" placeholder="exemplo@kairoz.com">
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h2>Sistema</h2>
+        <div class="opcao">
+          <button id="salvar">Salvar Configurações</button>
+          <button id="restaurar" class="secundario">Restaurar Padrão</button>
+        </div>
+      </div>
+
+      <div id="mensagem" class="mensagem">Configurações salvas com sucesso!</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="acessibilidade">
+      <button>Leitura em voz alta</button>
+      <button>Aa+ Aumentar fonte</button>
+      <button>Alto contraste</button>
+    </div>
+  </footer>
+
+  <script>
+    /* Fonte */
+    const fonte = document.getElementById('fonte');
+    fonte.addEventListener('input', () => {
+      document.body.style.fontSize = fonte.value + 'px';
+      localStorage.setItem('fonte', fonte.value);
+    });
+
+    // restaurar fonte salva
+    const fonteSalva = localStorage.getItem('fonte');
+    if (fonteSalva) {
+      fonte.value = fonteSalva;
+      document.body.style.fontSize = fonteSalva + 'px';
+    }
+
+    /* Mensagem salvar */
+    const salvar = document.getElementById('salvar');
+    const mensagem = document.getElementById('mensagem');
+    salvar.addEventListener('click', () => {
+      mensagem.style.display = 'block';
+      setTimeout(() => mensagem.style.display = 'none', 2500);
+    });
+
+    /* Restaurar */
+    const restaurar = document.getElementById('restaurar');
+    restaurar.addEventListener('click', () => {
+      fonte.value = 16;
+      document.body.style.fontSize = '16px';
+
+      localStorage.setItem('tema', 'claro');
+      document.body.className = 'claro';
+      tema.value = 'claro';
+
+      alert('Configurações restauradas para o padrão.');
+    });
+  </script>
+</body>
+</html>

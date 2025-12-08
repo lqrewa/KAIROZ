@@ -1,0 +1,381 @@
+/* ============================
+   FONTES
+   ============================ */
+.patrick-hand-regular {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ============================
+   BODY PADRÃO
+   ============================ */
+body {
+  background: linear-gradient(135deg, #fce1e4, #e1f2fb, #fef6e4);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ============================
+   HEADER
+   ============================ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ============================
+   LOGO KAIROZ
+   ============================ */
+.logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 0; /* elimina espaçamento entre spans */
+  line-height: 1;
+  background: linear-gradient(90deg, #ff9eb5, #a7e3ff, #ffd3b6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.titulo-kairoz span {
+  display: inline-block;
+  font-size: 28px;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.letra-k { color: #e4dcee; }
+.letra-a { color: #cbf2fc; }
+.letra-i { color: #f9ced1; }
+.letra-r { color: #feddbd; }
+.letra-o { color: #e4dcee; }
+.letra-z { color: #f9ced1; }
+
+/* ============================
+   NAVEGAÇÃO
+   ============================ */
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: #ff7fa3;
+  text-decoration: underline;
+}
+
+/* ============================
+   CONTEÚDO PRINCIPAL
+   ============================ */
+main {
+  flex: 1;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #444;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.descricao {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* ============================
+   POSTAGENS
+   ============================ */
+.nova-postagem,
+.categoria,
+.post-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.nova-postagem h2,
+.categoria h2,
+.post-card h3 {
+  color: #444;
+}
+
+.post-card.oferta {
+  border-left: 6px solid #a7e3ff;
+}
+
+.post-card .perfil {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.post-card img {
+  width: 55px;
+  border-radius: 50%;
+}
+
+.post-card .categoria {
+  font-size: 13px;
+  color: #888;
+}
+
+.post-card .mensagem {
+  color: #555;
+  margin: 10px 0;
+}
+
+.post-card .acoes {
+  display: flex;
+  gap: 10px;
+}
+
+.post-card .acoes button {
+  background: none;
+  border: 1px solid #ff9eb5;
+  color: #ff7fa3;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.post-card .acoes button:hover {
+  background: #ff9eb5;
+  color: white;
+}
+
+/* ============================
+   FORMULÁRIOS
+   ============================ */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input,
+form select,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+form button {
+  background: #ff9eb5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  align-self: flex-end;
+}
+
+form button:hover {
+  background: #ff7fa3;
+}
+
+/* ============================
+   RODAPÉ
+   ============================ */
+footer {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+.acessibilidade button {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  transition: 0.3s;
+}
+
+.acessibilidade button:hover {
+  color: #ff7fa3;
+}
+
+/* ============================
+   TEMA ESCURO
+   ============================ */
+body.escuro {
+  background: linear-gradient(135deg, #1C2630, #21283a, #322d46, #3f374e);
+  color: #ffffff;
+}
+
+body.escuro header,
+body.escuro footer {
+  background: #1d1d1d;
+  color: #ffffff;
+}
+
+body.escuro .nova-postagem,
+body.escuro .categoria,
+body.escuro .post-card {
+  background: #1d1d1d;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+body.escuro .titulo-kairoz .letra-k { color: #594e6e; }
+body.escuro .titulo-kairoz .letra-a { color: #584f7a; }
+body.escuro .titulo-kairoz .letra-i { color: #3e4c6d; }
+body.escuro .titulo-kairoz .letra-r { color: #3c4969; }
+body.escuro .titulo-kairoz .letra-o { color: #435b72; }
+body.escuro .titulo-kairoz .letra-z { color: #36485a; }
+
+body.escuro nav a { color: #ddd; }
+body.escuro nav a:hover,
+body.escuro nav a.ativo { color: #635172; }
+
+body.escuro input,
+body.escuro select,
+body.escuro textarea {
+  background: #252525;
+  color: #eee;
+  border: 1px solid #3a3a3a;
+}
+
+body.escuro button {
+  background: #635172;
+  color: #fff;
+}
+
+body.escuro button:hover {
+  background: #4f3f66;
+}
+
+body.escuro button.secundario {
+  background: #555;
+  color: #fff;
+}
+
+body.escuro button.secundario:hover {
+  background: #666;
+}
+
+body.escuro .acessibilidade button {
+  color: #ddd;
+}
+
+body.escuro .acessibilidade button:hover {
+  color: #635172;
+}
+
+/* ============================
+   TEMA ALTO CONTRASTE
+   ============================ */
+body.alto-contraste {
+  background: #000;
+  color: #fff;
+}
+
+body.alto-contraste header,
+body.alto-contraste footer {
+  background: #000;
+  color: yellow;
+}
+
+body.alto-contraste .nova-postagem,
+body.alto-contraste .categoria,
+body.alto-contraste .post-card {
+  background: #000;
+  border: 2px solid yellow;
+}
+
+body.alto-contraste .titulo-kairoz span {
+  color: yellow;
+}
+
+body.alto-contraste nav a {
+  color: yellow;
+}
+
+body.alto-contraste nav a:hover,
+body.alto-contraste nav a.ativo {
+  color: #fff;
+}
+
+body.alto-contraste input,
+body.alto-contraste select,
+body.alto-contraste textarea {
+  background: black;
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+body.alto-contraste button {
+  background: yellow;
+  color: black;
+}
+
+body.alto-contraste button:hover {
+  background: #fff;
+  color: black;
+}
+
+body.alto-contraste button.secundario {
+  background: black;
+  border: 2px solid yellow;
+  color: yellow;
+}
+
+body.alto-contraste button.secundario:hover {
+  background: yellow;
+  color: black;
+}
+
+body.alto-contraste .acessibilidade button {
+  color: yellow;
+}
+
+body.alto-contraste .acessibilidade button:hover {
+  color: white;
+}
+
+/* ============================
+   RESPONSIVO
+   ============================ */
+@media (max-width: 700px) {
+  .opcao {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .opcao input,
+  .opcao select {
+    width: 100%;
+  }
+}

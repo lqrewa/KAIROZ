@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KAIROZ - Início</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="inicio.css" />
+  <script defer src="tema.js"></script>
+</head>
+
+<body>
+  <aside class="menu-lateral">
+    <div class="logo titulo-kairoz">
+      <span class="letra-k">K</span>
+      <span class="letra-a">A</span>
+      <span class="letra-i">I</span>
+      <span class="letra-r">R</span>
+      <span class="letra-o">O</span>
+      <span class="letra-z">Z</span>
+    </div>
+
+    <nav>
+      <button class="ativo" id="btn-inicio">
+        <span class="material-icons">home</span> Início
+      </button>
+
+      <details>
+        <summary>
+          <span class="material-icons">groups</span> Colegas
+        </summary>
+        <ul>
+          <li><button class="contato">Bernardo Castro</button></li>
+          <li><button class="contato">Pietro Calvaes</button></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>
+          <span class="material-icons">school</span> Professores
+        </summary>
+        <ul>
+          <li><button class="contato">Prof. Julianne Nascimento</button></li>
+          <li>
+            <button class="contato" onclick="window.location.href='perfilprofessor.html'">
+              Prof. Weverton
+            </button>
+          </li>
+        </ul>
+      </details>
+
+      <button id="btn-mural">
+        <span class="material-icons">handshake</span> Mural de Ajuda
+      </button>
+      <button id="btn-config">
+        <span class="material-icons">settings</span> Configurações
+      </button>
+      <button id="btn-perfil">
+        <span class="material-icons">person</span> Sobre Você
+      </button>
+      <button id="btn-sala">
+        <span class="material-icons">cast_for_education</span> Sala de Aula
+      </button>
+      <button class="contato" onclick="window.location.href='feed.html'">
+        <span class="material-icons">chat</span> Bate-papo
+      </button>
+      <button class="contato" onclick="window.location.href='index.html'">
+        <span class="material-icons">logout</span> Logout
+      </button>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="materias">
+      <h1>Suas Matérias</h1>
+
+      <div class="cards-container">
+        <div class="card">Língua Portuguesa</div>
+        <div class="card">Inglês</div>
+        <div class="card">Arte</div>
+        <div class="card">Educação Física</div>
+        <div class="card">Matemática</div>
+        <div class="card">Biologia</div>
+        <div class="card">Química</div>
+        <div class="card">Física</div>
+        <div class="card">História</div>
+        <div class="card">Geografia</div>
+        <div class="card">Filosofia</div>
+        <div class="card">Sociologia</div>
+      </div>
+    </section>
+
+    <section class="conteudo-materia" id="conteudo-materia">
+      <div class="banner"><h2>Selecione uma matéria para ver o conteúdo</h2></div>
+    </section>
+  </main>
+
+  <script src="inicio.js"></script>
+</body>
+</html>
