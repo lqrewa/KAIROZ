@@ -1,15 +1,10 @@
-/* ============================
-   FONTES
-   ============================ */
+
 .patrick-hand-regular {
   font-family: "Patrick Hand", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
-/* ============================
-   BODY PADRÃO
-   ============================ */
 body {
   background: linear-gradient(135deg, #fce1e4, #e1f2fb, #fef6e4);
   min-height: 100vh;
@@ -19,9 +14,7 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* ============================
-   HEADER
-   ============================ */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -32,13 +25,11 @@ header {
   transition: background 0.3s, color 0.3s;
 }
 
-/* ============================
-   LOGO KAIROZ
-   ============================ */
+
 .logo {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
-  font-size: 0; /* elimina espaçamento entre spans */
+  font-size: 0;
   line-height: 1;
   background: linear-gradient(90deg, #ff9eb5, #a7e3ff, #ffd3b6);
   -webkit-background-clip: text;
@@ -63,9 +54,7 @@ header {
 .letra-o { color: #e4dcee; }
 .letra-z { color: #f9ced1; }
 
-/* ============================
-   NAVEGAÇÃO
-   ============================ */
+
 nav a {
   margin: 0 12px;
   text-decoration: none;
@@ -80,9 +69,7 @@ nav a.ativo {
   text-decoration: underline;
 }
 
-/* ============================
-   CONTEÚDO PRINCIPAL
-   ============================ */
+
 main {
   flex: 1;
   padding: 40px;
@@ -103,9 +90,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* ============================
-   POSTAGENS
-   ============================ */
+
 .nova-postagem,
 .categoria,
 .post-card {
@@ -170,9 +155,7 @@ h1 {
   color: white;
 }
 
-/* ============================
-   FORMULÁRIOS
-   ============================ */
+
 form {
   display: flex;
   flex-direction: column;
@@ -203,9 +186,7 @@ form button:hover {
   background: #ff7fa3;
 }
 
-/* ============================
-   RODAPÉ
-   ============================ */
+
 footer {
   background: white;
   padding: 15px;
@@ -228,9 +209,7 @@ footer {
   color: #ff7fa3;
 }
 
-/* ============================
-   TEMA ESCURO
-   ============================ */
+
 body.escuro {
   background: linear-gradient(135deg, #1C2630, #21283a, #322d46, #3f374e);
   color: #ffffff;
@@ -294,9 +273,7 @@ body.escuro .acessibilidade button:hover {
   color: #635172;
 }
 
-/* ============================
-   TEMA ALTO CONTRASTE
-   ============================ */
+
 body.alto-contraste {
   background: #000;
   color: #fff;
@@ -365,9 +342,7 @@ body.alto-contraste .acessibilidade button:hover {
   color: white;
 }
 
-/* ============================
-   RESPONSIVO
-   ============================ */
+
 @media (max-width: 700px) {
   .opcao {
     flex-direction: column;
@@ -379,3 +354,4 @@ body.alto-contraste .acessibilidade button:hover {
     width: 100%;
   }
 }
+
