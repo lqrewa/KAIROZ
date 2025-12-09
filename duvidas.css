@@ -1,15 +1,11 @@
-/* ------------------------------
-      FONTES
------------------------------- */
+
 .patrick-hand-regular {
   font-family: "Patrick Hand", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
-/* ------------------------------
-      TEMA CLARO
------------------------------- */
+
 body {
   background: linear-gradient(135deg, #fce1e4, #e1f2fb, #fef6e4);
   min-height: 100vh;
@@ -18,7 +14,7 @@ body {
   color: #333;
 }
 
-/* HEADER */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -50,7 +46,7 @@ nav a.ativo {
   text-decoration: underline;
 }
 
-/* MAIN */
+
 main {
   flex: 1;
   padding: 40px;
@@ -71,7 +67,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* FILTROS */
+
 .filtros {
   display: flex;
   gap: 10px;
@@ -87,7 +83,7 @@ h1 {
   font-size: 14px;
 }
 
-/* FAQ */
+
 .faq-item {
   background: white;
   border-radius: 15px;
@@ -146,7 +142,7 @@ h1 {
   color: white;
 }
 
-/* SUPORTE */
+
 .contato-suporte {
   text-align: center;
   margin-top: 30px;
@@ -163,7 +159,7 @@ h1 {
   text-decoration: underline;
 }
 
-/* FOOTER */
+
 footer {
   background: white;
   padding: 15px;
@@ -185,9 +181,7 @@ footer {
   color: #ff7fa3;
 }
 
-/* ------------------------------
-      TEMA ESCURO
------------------------------- */
+
 body.escuro {
   background: linear-gradient(135deg, #1c2630, #21283a, #322d46, #3f374e);
   color: #eee;
@@ -207,14 +201,14 @@ body.escuro nav a.ativo {
   color: #635172;
 }
 
-/* logo escura */
+
 body.escuro .logo {
   background: linear-gradient(90deg, #9a82b8, #9f97c2, #c77eb5, #dbae6a);
   -webkit-background-clip: text;
   color: transparent;
 }
 
-/* filtros */
+
 body.escuro .filtros input,
 body.escuro .filtros select {
   background: #1d1d1d;
@@ -222,7 +216,7 @@ body.escuro .filtros select {
   border: 1px solid #444;
 }
 
-/* FAQ */
+
 body.escuro .faq-item {
   background: #1d1d1d;
   box-shadow: 0 3px 8px rgba(0,0,0,0.5);
@@ -257,7 +251,7 @@ body.escuro .feedback button:hover {
   color: white;
 }
 
-/* footer */
+
 body.escuro footer {
   background: #1d1d1d;
   color: #eee;
@@ -272,9 +266,7 @@ body.escuro .acessibilidade button:hover {
   color: #635172;
 }
 
-/* ------------------------------
-      ALTO CONTRASTE
------------------------------- */
+
 body.alto-contraste {
   background: #000;
   color: #fff;
@@ -301,7 +293,7 @@ body.alto-contraste .logo {
   -webkit-background-clip: initial;
 }
 
-/* filtros */
+
 body.alto-contraste .filtros input,
 body.alto-contraste .filtros select {
   background: #000;
@@ -309,7 +301,7 @@ body.alto-contraste .filtros select {
   color: yellow;
 }
 
-/* FAQ */
+
 body.alto-contraste .faq-item {
   background: #000;
   border: 2px solid yellow;
@@ -349,11 +341,10 @@ body.alto-contraste .contato-suporte a {
   color: yellow;
 }
 
-/* ------------------------------
-      RESPONSIVO
------------------------------- */
+
 @media (max-width: 600px) {
   .filtros {
     flex-direction: column;
   }
 }
+
