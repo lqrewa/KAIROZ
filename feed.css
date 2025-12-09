@@ -1,6 +1,4 @@
-/* ==========================
-   FONTE E ESTILO GERAL
-   ========================== */
+
 body {
   background: linear-gradient(135deg, #fce1e4, #e1f2fb, #fef6e4);
   min-height: 100vh;
@@ -21,9 +19,7 @@ body {
   gap: 25px;
 }
 
-/* ==========================
-   BOTÃO VOLTAR
-   ========================== */
+
 .back-button {
   position: fixed;
   top: 15px;
@@ -45,9 +41,7 @@ body {
   color: #000;
 }
 
-/* ==========================
-   SEÇÃO DE BATE-PAPO
-   ========================== */
+
 .chat-section {
   flex: 2;
   background: white;
@@ -99,7 +93,6 @@ body {
   font-weight: 600;
 }
 
-/* CARTÕES DE CONVERSA */
 .conversations {
   margin-top: 20px;
 }
@@ -143,9 +136,7 @@ body {
   color: #888;
 }
 
-/* ==========================
-   SEÇÃO DE AJUDA ESCOLAR
-   ========================== */
+
 .help-section {
   flex: 1;
   background: white;
@@ -200,9 +191,7 @@ body {
   background: #ff7fa3;
 }
 
-/* ==========================
-   RESPONSIVO
-   ========================== */
+
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -213,9 +202,7 @@ body {
   }
 }
 
-/* ==========================
-   TEMA ESCURO
-   ========================== */
+
 body.escuro {
   background: linear-gradient(135deg, #1C2630,#21283a, #322d46, #3f374e);
   color: #eee;
@@ -243,9 +230,7 @@ body.escuro .accessibility:hover {
   background: #7c628e;
 }
 
-/* ==========================
-   ALTO CONTRASTE
-   ========================== */
+
 body.alto-contraste {
   background: #000;
   color: yellow;
@@ -274,3 +259,4 @@ body.alto-contraste .accessibility:hover {
   background: white;
   color: black;
 }
+
