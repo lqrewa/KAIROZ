@@ -23,7 +23,7 @@
 
   <div class="capa">
     <img id="banner-img" src="" alt="Foto de capa do usuário">
-    <span id="edit-banner-icon" class="edit-icon">🖼️</span>
+    <span id="edit-banner-icon" class="edit-icon">panorama</span>
     <input type="file" id="banner-input" accept="image/*" hidden>
   </div>
 
@@ -32,9 +32,9 @@
       <section class="perfil">
         <div class="perfil-topo">
           <img id="foto-perfil-img" class="foto-perfil" src="" alt="Foto de perfil">
-          <span id="edit-pfp-icon" class="edit-icon">📷</span>
+          <span id="edit-pfp-icon" class="edit-icon">photo_camera</span>
           <input type="file" id="pfp-input" accept="image/*" hidden>
-          <button id="btn-editar" class="editar">✏️ Editar perfil</button>
+          <button id="btn-editar" class="editar">Editar perfil</button>
         </div>
         
         <div class="info">
@@ -117,7 +117,7 @@
         inputNome.placeholder = "Digite seu nome de usuário";
         nomeElemento.replaceWith(inputNome);
       } else {
-        btnEditar.textContent = "✏️ Editar perfil";
+        btnEditar.textContent = " Editar perfil";
         iconBanner.style.display = "none";
         iconPfp.style.display = "none";
 
@@ -176,4 +176,5 @@
   </script>
 </body>
 </html>
+
 
