@@ -10,7 +10,7 @@ body {
   height: 100vh;
 }
 
-/* Fundo */
+
 .fundo-animado {
   position: fixed;
   top: 0;
@@ -22,7 +22,6 @@ body {
   z-index: -1;
 }
 
-/* Menu superior */
 .menu-superior {
   position: absolute;
   top: 20px;
@@ -51,7 +50,7 @@ body {
   color: white;
 }
 
-/* Tooltip */
+
 .tooltip {
   position: absolute;
   background: white;
@@ -72,16 +71,16 @@ body {
   pointer-events: all;
 }
 
-/* Corpo principal */
+
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* separa login à esquerda e KAIROZ à direita */
+  justify-content: space-between;
   height: 100vh;
   padding: 40px;
 }
 
-/* Caixa de login */
+
 .login-box {
   background: rgba(255, 255, 255, 0.8);
   padding: 40px;
@@ -91,18 +90,18 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  order: 1; /* garante que fique à esquerda */
+  order: 1; 
 }
 
-/* Lado direito - KAIROZ */
+
 .info-box {
   font-family: "Montserrat", "Patrick Hand", cursive;
   font-size: 60px;
   color: white;
   font-weight: 900;
   text-shadow: 0 2px 6px rgba(150, 170, 200, 0.4);
-  text-align: right; /* texto alinhado à direita */
-  order: 2; /* garante que fique à direita */
+  text-align: right; 
+  order: 2;
   width: 50%;
 }
 
@@ -161,7 +160,7 @@ input {
   color: #ff7fa3;
 }
 
-/* Lado direito - KAIROZ */
+
 .info-box {
   font-family: "Montserrat", cursive;
   font-size: 60px;
@@ -174,12 +173,12 @@ input {
 }
 
 .titulo-kairoz {
-  font-size: 0; /* remove o espaço entre spans */
+  font-size: 0;
 }
 
 .titulo-kairoz span {
   display: inline-block;
-  font-size: 90px; /* restaura o tamanho original da fonte */
+  font-size: 90px; 
   line-height: 1;
   text-shadow: white 0px 0px 8px;
 }
@@ -192,17 +191,17 @@ input {
 .letra-z { color: #f9ced1; }
 
 
-/* Subtítulo abaixo de KAIROZ */
+
 .info-box p {
-  font-family: "Patrick Hand", cursive; /* mesma fonte da caixinha de login */
+  font-family: "Patrick Hand", cursive;
   font-size: 22px;
   color: #e4dcee;
-  margin-top: 5px; /* aproxima mais do título */
+  margin-top: 5px; 
   text-shadow: white 0px 0px 8px;
 }
 
 
-/* Responsividade */
+
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -228,3 +227,4 @@ input {
     display: none;
   }
 }
+
