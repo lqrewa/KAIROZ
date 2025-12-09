@@ -1,13 +1,11 @@
-/* FONTES */
+
 .patrick-hand-regular {
   font-family: "Patrick Hand", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
-/* ============================
-      TEMA CLARO (PADRÃO)
-============================ */
+
 
 body {
   display: flex;
@@ -16,9 +14,9 @@ body {
   color: #333;
 }
 
-/* menu lateral com largura menor */
+
 .menu-lateral {
-  width: 180px; /* largura reduzida */
+  width: 180px;
   background: white;
   border-right: 1px solid #ddd;
   padding: 20px;
@@ -26,7 +24,7 @@ body {
   flex-direction: column;
   position: fixed;
   top: 0;
-  left: 0;       /* encosta no canto */
+  left: 0;     
   bottom: 0;
   overflow-y: auto;
 }
@@ -43,7 +41,6 @@ body {
   color: transparent;
 }
 
-/* Letras */
 .titulo-kairoz span {
   display: inline-block;
   font-size: 26px;
@@ -55,7 +52,7 @@ body {
   vertical-align: middle;
 }
 
-/* Cores das letras */
+
 .letra-k { color: #e4dcee; }
 .letra-a { color: #cbf2fc; }
 .letra-i { color: #f9ced1; }
@@ -97,9 +94,9 @@ details ul li button {
   padding: 5px 0;
 }
 
-/* main ajustado à nova largura */
+
 main {
-  margin-left: 180px; /* ajusta ao tamanho da barra */
+  margin-left: 180px;
   display: flex;
   flex-direction: column;
   width: calc(100% - 180px);
@@ -173,9 +170,7 @@ footer {
   color: #ff7fa3;
 }
 
-/* ============================
-      TEMA ESCURO
-============================ */
+
 
 body.escuro {
   background: linear-gradient(135deg, #1c2630, #21283a, #322d46, #3f374e);
@@ -246,9 +241,7 @@ body.escuro .acessibilidade button:hover {
   color: #635172;
 }
 
-/* ============================
-      TEMA ALTO CONTRASTE
-============================ */
+
 
 body.alto-contraste {
   background: #000;
@@ -313,7 +306,7 @@ body.alto-contraste .acessibilidade button:hover {
   color: white;
 }
 
-/* RESPONSIVIDADE (mantida) */
+
 @media (max-width: 768px) {
   .menu-lateral {
     position: static;
@@ -337,3 +330,4 @@ body.alto-contraste .acessibilidade button:hover {
     margin: 20px;
   }
 }
+
