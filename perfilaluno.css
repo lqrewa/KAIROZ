@@ -1,6 +1,3 @@
-/* ========================= */
-/* =====   FONTES     ===== */
-/* ========================= */
 
 .patrick-hand-regular {
   font-family: "Patrick Hand", cursive;
@@ -8,9 +5,7 @@
   font-style: normal;
 }
 
-/* ========================= */
-/* =====   BASE       ===== */
-/* ========================= */
+
 
 body {
   background: #fff;
@@ -22,9 +17,7 @@ body {
   font-family: sans-serif;
 }
 
-/* ========================= */
-/* =====   TOPO       ===== */
-/* ========================= */
+
 
 .topo {
   display: flex;
@@ -50,9 +43,7 @@ body {
   cursor: pointer;
 }
 
-/* ============================= */
-/* =====   FOTO DE CAPA    ===== */
-/* ============================= */
+
 
 .capa {
   position: relative;
@@ -64,7 +55,7 @@ body {
   object-fit: cover;
 }
 
-/* Ícone editar banner */
+
 #edit-banner-icon {
   position: absolute;
   right: 15px;
@@ -78,13 +69,11 @@ body {
   z-index: 5;
 }
 
-/* ===================================== */
-/* =====   LAYOUT PRINCIPAL + SIDEBAR ==== */
-/* ===================================== */
+
 
 .layout {
   display: flex;
-  justify-content: flex-start; /* DEIXA A COLUNA ESQUERDA MAIS À ESQUERDA */
+  justify-content: flex-start; 
   gap: 35px;
   width: 100%;
   max-width: 1300px;
@@ -97,9 +86,7 @@ body {
   max-width: 650px;
 }
 
-/* ========================= */
-/* =====   SIDEBAR    ===== */
-/* ========================= */
+
 
 .sidebar {
   width: 260px;
@@ -130,20 +117,18 @@ body {
   color: #666;
 }
 
-/* =============================== */
-/* =====   PERFIL ALUNO     ===== */
-/* =============================== */
+
 
 .perfil {
   width: 100%;
   position: relative;
 }
 
-/* Foto de perfil — QUADRADA como pedido */
+
 .foto-perfil {
   width: 120px;
   height: 120px;
-  border-radius: 10px; /* ALTERADO */
+  border-radius: 10px; 
   border: 4px solid #fff;
   position: absolute;
   top: -60px;
@@ -152,7 +137,7 @@ body {
   z-index: 5;
 }
 
-/* Ícone editar foto */
+
 #edit-pfp-icon {
   position: absolute;
   top: 40px;
@@ -166,7 +151,7 @@ body {
   z-index: 6;
 }
 
-/* Botão editar */
+
 .perfil-topo {
   display: flex;
   justify-content: flex-end;
@@ -187,7 +172,7 @@ body {
   background: #ff7fa3;
 }
 
-/* Informações do usuário */
+
 .info {
   margin-top: 70px;
   padding: 10px 5px;
@@ -228,7 +213,7 @@ body {
   margin-top: 5px;
 }
 
-/* Estatísticas */
+
 .estatisticas {
   display: flex;
   gap: 20px;
@@ -246,7 +231,7 @@ body {
   color: #000;
 }
 
-/* Abas */
+
 .abas {
   display: flex;
   justify-content: space-around;
@@ -273,7 +258,7 @@ body {
   color: #ff9eb5;
 }
 
-/* Área sem publicações */
+
 .publicacoes {
   display: flex;
   justify-content: center;
@@ -287,9 +272,7 @@ body {
   font-style: normal;
 }
 
-/* ========================== */
-/* =====   RODAPÉ      ===== */
-/* ========================== */
+
 
 footer {
   background: #fff;
@@ -314,23 +297,21 @@ footer {
   color: #ff7fa3;
 }
 
-/* ========================= */
-/* =====   TEMA ESCURO  ===== */
-/* ========================= */
+
 
 body.escuro {
   background: linear-gradient(135deg, #1C2630,#21283a, #322d46, #3f374e);
   color: #eee;
 }
 
-/* topo */
+
 body.escuro .topo {
   background: #1d1d1d;
   color: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-/* sidebar */
+
 body.escuro .card-sidebar {
   background: #1d1d1d;
   border: 1px solid #444;
@@ -346,24 +327,24 @@ body.escuro .card-sidebar p {
   color: #ccc;
 }
 
-/* capa */
+
 body.escuro .capa img {
   filter: brightness(0.8);
 }
 
-/* foto de perfil */
+
 body.escuro .foto-perfil {
   border: 4px solid #1d1d1d;
 }
 
-/* ícones editar */
+
 body.escuro #edit-banner-icon,
 body.escuro #edit-pfp-icon {
   background: #222222cc;
   color: #eee;
 }
 
-/* botão editar */
+
 body.escuro .editar {
   background: #635172;
   color: #fff;
@@ -373,7 +354,7 @@ body.escuro .editar:hover {
   background: #7a658c;
 }
 
-/* textos */
+
 body.escuro .info h1,
 body.escuro .bio,
 body.escuro .funcao {
@@ -385,7 +366,7 @@ body.escuro .entrada {
   color: #bbb;
 }
 
-/* estatísticas */
+
 body.escuro .estatisticas {
   border-bottom: 1px solid #555;
 }
@@ -398,7 +379,7 @@ body.escuro .estatisticas strong {
   color: #fff;
 }
 
-/* abas */
+
 body.escuro .abas {
   border-bottom: 1px solid #555;
 }
@@ -416,7 +397,7 @@ body.escuro .abas button.ativo {
   border-bottom: 3px solid #635172;
 }
 
-/* rodapé */
+
 body.escuro footer {
   background: #1d1d1d;
   color: #fff;
@@ -430,23 +411,21 @@ body.escuro .acessibilidade button:hover {
   color: #a894b8;
 }
 
-/* ================================ */
-/* =====   TEMA ALTO CONTRASTE ===== */
-/* ================================ */
+
 
 body.alto-contraste {
   background: #000;
   color: #fff;
 }
 
-/* topo */
+
 body.alto-contraste .topo {
   background: #000;
   color: yellow;
   border-bottom: 2px solid yellow;
 }
 
-/* sidebar */
+
 body.alto-contraste .card-sidebar {
   background: #000;
   border: 2px solid yellow;
@@ -461,24 +440,24 @@ body.alto-contraste .card-sidebar p {
   color: white;
 }
 
-/* capa */
+
 body.alto-contraste .capa img {
   filter: brightness(0.6);
 }
 
-/* foto perfil */
+
 body.alto-contraste .foto-perfil {
   border: 4px solid yellow;
 }
 
-/* ícones editar */
+
 body.alto-contraste #edit-banner-icon,
 body.alto-contraste #edit-pfp-icon {
   background: yellow;
   color: black;
 }
 
-/* botão editar */
+
 body.alto-contraste .editar {
   background: yellow;
   color: black;
@@ -489,7 +468,7 @@ body.alto-contraste .editar:hover {
   background: white;
 }
 
-/* textos */
+
 body.alto-contraste .info h1,
 body.alto-contraste .bio,
 body.alto-contraste .funcao,
@@ -503,7 +482,7 @@ body.alto-contraste .estatisticas span {
   color: white;
 }
 
-/* abas */
+
 body.alto-contraste .abas {
   border-bottom: 2px solid yellow;
 }
@@ -520,7 +499,7 @@ body.alto-contraste .abas button:hover {
   color: white;
 }
 
-/* rodapé */
+
 body.alto-contraste footer {
   background: #000;
   color: yellow;
@@ -536,9 +515,6 @@ body.alto-contraste .acessibilidade button:hover {
 }
 
 
-/* ========================== */
-/* =====   RESPONSIVO   ===== */
-/* ========================== */
 
 @media (max-width: 900px) {
   .layout {
@@ -559,4 +535,5 @@ body.alto-contraste .acessibilidade button:hover {
   }
 
   .edit
+
 }
