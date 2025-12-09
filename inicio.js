@@ -1,4 +1,4 @@
-// ================= NAVEGAÇÃO ENTRE PÁGINAS =================
+
 
 document.getElementById('btn-inicio').addEventListener('click', () => {
   window.location.href = 'inicio.html';
@@ -21,7 +21,7 @@ document.getElementById('btn-sala').addEventListener('click', () => {
 });
 
 
-// ================= INTERAÇÃO COM OS CARDS =================
+
 
 const cards = document.querySelectorAll('.card');
 const conteudo = document.getElementById('conteudo-materia');
@@ -52,7 +52,6 @@ cards.forEach(card => {
 });
 
 
-// ================= CHAT DE COLEGAS E PROFESSORES =================
 
 const contatos = document.querySelectorAll('.contato');
 
@@ -60,7 +59,6 @@ contatos.forEach(contato => {
   contato.addEventListener('click', () => {
     const nome = contato.textContent;
     alert("Abrindo chat com: " + nome);
-    // No futuro você pode trocar por:
-    // window.location.href = "chat.html?user=" + nome;
   });
 });
+
