@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="configuracoes.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script defer src="tema.js"></script> <!-- JS do tema -->
+  <script defer src="tema.js"></script> 
 </head>
 
 <body>
@@ -124,21 +124,21 @@
   </footer>
 
   <script>
-    /* Fonte */
+
     const fonte = document.getElementById('fonte');
     fonte.addEventListener('input', () => {
       document.body.style.fontSize = fonte.value + 'px';
       localStorage.setItem('fonte', fonte.value);
     });
 
-    // restaurar fonte salva
+    
     const fonteSalva = localStorage.getItem('fonte');
     if (fonteSalva) {
       fonte.value = fonteSalva;
       document.body.style.fontSize = fonteSalva + 'px';
     }
 
-    /* Mensagem salvar */
+
     const salvar = document.getElementById('salvar');
     const mensagem = document.getElementById('mensagem');
     salvar.addEventListener('click', () => {
@@ -146,7 +146,7 @@
       setTimeout(() => mensagem.style.display = 'none', 2500);
     });
 
-    /* Restaurar */
+
     const restaurar = document.getElementById('restaurar');
     restaurar.addEventListener('click', () => {
       fonte.value = 16;
@@ -161,3 +161,4 @@
   </script>
 </body>
 </html>
+
