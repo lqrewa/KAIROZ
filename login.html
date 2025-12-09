@@ -13,7 +13,7 @@
 <body>
   <div class="fundo-animado"></div>
 
-  <!-- Menu superior -->
+
   <header class="menu-superior">
     <nav>
       <button class="nav-btn" data-info="Bem-vindo à página inicial do KAIROZ!">Início</button>
@@ -23,9 +23,8 @@
     </nav>
   </header>
 
-  <!-- Corpo principal -->
+
   <main class="container">
-    <!-- Caixa de login -->
     <section class="login-box">
       <h2>Começe a estudar hoje mesmo!</h2>
       <form id="formLogin">
@@ -44,7 +43,7 @@
       <button class="btn-alternar" id="alternarForm">Já tem uma conta?</button>
     </section>
 
-    <!-- Lado direito -->
+ 
     <section class="info-box">
       <h1 class="titulo-kairoz">
         <span class="letra-k">K</span>
@@ -58,11 +57,11 @@
     </section>
   </main>
 
-  <!-- Balão de tooltip -->
+ 
   <div id="tooltip" class="tooltip"></div>
 
   <script>
-    // Alternar formulário (cadastro ↔ login simples)
+ 
     const alternar = document.getElementById('alternarForm');
     const form = document.getElementById('formLogin');
     let modoLogin = false;
@@ -89,7 +88,7 @@
       alternar.textContent = modoLogin ? "Criar uma nova conta" : "Já tem uma conta?";
     });
 
-    // Tooltip (balão dos botões do menu)
+    
     const buttons = document.querySelectorAll('.nav-btn');
     const tooltip = document.getElementById('tooltip');
     let activeButton = null;
@@ -118,7 +117,7 @@
       }
     });
 
-    // Validação do formulário e salvar dados
+    
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const username = form.querySelector('#username') ? form.querySelector('#username').value.trim() : null;
@@ -130,13 +129,14 @@
         return;
       }
 
-      // Salvar dados no localStorage
+      
       if (username) localStorage.setItem("usuario-nome", username);
       localStorage.setItem("usuario-email", email);
 
-      // Redirecionar
-      window.location.href = 'perfilaluno.html';
+     
+      window.location.href = 'inicio.html';
     });
   </script>
 </body>
 </html>
+
