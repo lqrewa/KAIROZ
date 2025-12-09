@@ -20,13 +20,13 @@
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   }
   
-/* ===== LOGO KAIROZ ===== */
+
 .logo {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
-  font-size: 28px; /* tamanho do logo */
+  font-size: 28px;
   margin-bottom: 0;
-  font-size: 0; /* elimina espaçamento entre spans */
+  font-size: 0; 
   line-height: 1;
   background: linear-gradient(90deg, #ff9eb5, #a7e3ff, #ffd3b6);
   -webkit-background-clip: text;
@@ -35,7 +35,7 @@
 
 .titulo-kairoz span {
   display: inline-block;
-  font-size: 28px; /* restaura tamanho das letras */
+  font-size: 28px; 
   font-family: inherit;
   font-weight: inherit;
   line-height: 1;
@@ -44,7 +44,7 @@
   vertical-align: middle;
 }
 
-/* Cores opcionais por letra (mais vivo que o gradiente único) */
+
 .letra-k { color: #e4dcee; }
 .letra-a { color: #cbf2fc; }
 .letra-i { color: #f9ced1; }
@@ -154,7 +154,7 @@
     background: #ccc;
   }
   
-  /* Mensagem de confirmação */
+
   .mensagem {
     display: none;
     text-align: center;
@@ -166,7 +166,7 @@
     font-weight: 500;
   }
   
-  /* Temas */
+
   body.escuro {
     background: #222;
     color: #eee;
@@ -211,7 +211,7 @@
     color: #ff7fa3;
   }
   
-  /* Responsivo */
+
   @media (max-width: 700px) {
     .opcao {
       flex-direction: column;
@@ -224,9 +224,7 @@
     }
   }
 
-/* ============================
-   TEMA ESCURO
-   ============================ */
+
 
 body.escuro {
     background: linear-gradient(135deg, #1C2630,#21283a, #322d46, #3f374e);
@@ -236,14 +234,14 @@ body.escuro {
     color: #ffffff;
 }
 
-/* Header e Footer */
+
 body.escuro header,
 body.escuro footer {
   background: #1d1d1d;
   color: #ffffff;
 }
 
-/* Caixas ("categoria") */
+
 body.escuro .categoria {
   background: #1d1d1d;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
@@ -265,7 +263,7 @@ body.escuro .opcao select {
   border: 1px solid #3a3a3a;
 }
 
-/* Logo (KAIROZ) no tema escuro  */
+
 body.escuro .titulo-kairoz .letra-k { color: #594e6e; }
 body.escuro .titulo-kairoz .letra-a { color: #584f7a; }
 body.escuro .titulo-kairoz .letra-i { color: #3e4c6d; }
@@ -274,15 +272,7 @@ body.escuro .titulo-kairoz .letra-o { color: #435b72; }
 body.escuro .titulo-kairoz .letra-z { color: #36485a; }
 
 
-/* Se quiser gradiente, substitua pelo código abaixo:
-body.escuro .logo {
-  background: linear-gradient(90deg, #a7c7ff, #ffe5b0, #ff9eb5);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-*/
 
-/* Navegação */
 body.escuro nav a {
   color: #ddd;
 }
@@ -292,7 +282,6 @@ body.escuro nav a.ativo {
   color: #635172;
 }
 
-/* Inputs */
 body.escuro input[type="text"],
 body.escuro input[type="email"],
 body.escuro input[type="file"] {
@@ -301,7 +290,7 @@ body.escuro input[type="file"] {
   color: #eee;
 }
 
-/* Botões normais */
+
 body.escuro button {
   background: #635172;
 }
@@ -310,7 +299,7 @@ body.escuro button:hover {
   background: #635172;
 }
 
-/* Botão secundário */
+
 body.escuro button.secundario {
   background: #555;
   color: #fff;
@@ -320,7 +309,7 @@ body.escuro button.secundario:hover {
   background: #666;
 }
 
-/* Rodapé – botões */
+
 body.escuro .acessibilidade button {
   color: #ddd;
 }
@@ -332,23 +321,19 @@ body.escuro .acessibilidade button:hover {
 
 
 
-/* ============================
-   TEMA ALTO CONTRASTE
-   ============================ */
 
 body.alto-contraste {
   background: #000;
   color: #fff;
 }
 
-/* Header e Footer */
 body.alto-contraste header,
 body.alto-contraste footer {
   background: #000;
   color: yellow;
 }
 
-/* Caixas */
+
 body.alto-contraste .categoria {
   background: #000;
   border: 2px solid yellow;
@@ -370,12 +355,12 @@ body.alto-contraste .opcao select {
   border: 2px solid yellow;
 }
 
-/* Logo */
+
 body.alto-contraste .titulo-kairoz span {
   color: yellow;
 }
 
-/* Menu */
+
 body.alto-contraste nav a {
   color: yellow;
 }
@@ -385,7 +370,7 @@ body.alto-contraste nav a.ativo {
   color: #fff;
 }
 
-/* Botões */
+
 body.alto-contraste button {
   background: yellow;
   color: black;
@@ -396,7 +381,7 @@ body.alto-contraste button:hover {
   color: black;
 }
 
-/* Botões secundários */
+
 body.alto-contraste button.secundario {
   background: black;
   border: 2px solid yellow;
@@ -408,7 +393,6 @@ body.alto-contraste button.secundario:hover {
   color: black;
 }
 
-/* Rodapé botões */
 body.alto-contraste .acessibilidade button {
   color: yellow;
 }
@@ -418,4 +402,5 @@ body.alto-contraste .acessibilidade button:hover {
 }
 
   
+
 
