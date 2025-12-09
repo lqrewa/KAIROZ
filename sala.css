@@ -6,7 +6,6 @@ body {
   display: flex;
 }
 
-/* ===== Sidebar ===== */
 .sidebar {
   width: 70px;
   background: #fff;
@@ -31,14 +30,12 @@ body {
   transform: scale(1.2);
 }
 
-/* ===== Conteúdo ===== */
 .conteudo {
   flex: 1;
   display: flex;
   position: relative;
 }
 
-/* ===== Grade estilo Zoom ===== */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -70,7 +67,6 @@ body {
   border-radius: 6px;
 }
 
-/* ===== Chat ===== */
 .chat {
   width: 300px;
   background: white;
@@ -92,7 +88,6 @@ body {
   border-radius: 6px;
 }
 
-/* ===== Tela de saída ===== */
 .exit-screen {
   display: none;
   position: absolute;
@@ -118,3 +113,4 @@ body {
 .voltar-btn:hover {
   background: #ddd;
 }
+
