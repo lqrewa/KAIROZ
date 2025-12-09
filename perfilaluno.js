@@ -1,4 +1,3 @@
-// ======== CARREGAR IMAGENS SALVAS E NOME ========
 window.onload = function () {
   const bannerSaved = localStorage.getItem("banner-img");
   const pfpSaved = localStorage.getItem("pfp-img");
@@ -10,18 +9,17 @@ window.onload = function () {
   document.getElementById("foto-perfil-img").src =
     pfpSaved || "https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg";
 
-  // Preencher nome
+
   const nomeElemento = document.querySelector(".usuario");
   nomeElemento.textContent = nomeSalvo ? "@" + nomeSalvo : "@eu";
 
-  // Atualizar "Você" na sala
+
   const user1 = document.getElementById("usuario-1");
   if (nomeSalvo) {
     user1.querySelector(".user-name").textContent = nomeSalvo;
   }
 };
 
-// ===================== EDITAR MODO =====================
 let editando = false;
 
 const btnEditar = document.getElementById("btn-editar");
@@ -38,7 +36,6 @@ btnEditar.addEventListener("click", () => {
     iconBanner.style.display = "block";
     iconPfp.style.display = "block";
 
-    // Transformar nome em input editável
     const nomeAtual = nomeElemento.textContent.replace("@", "");
     const inputNome = document.createElement("input");
     inputNome.type = "text";
@@ -51,7 +48,6 @@ btnEditar.addEventListener("click", () => {
     iconBanner.style.display = "none";
     iconPfp.style.display = "none";
 
-    // Salvar nome no localStorage e voltar para texto normal
     const inputNome = document.getElementById("input-nome");
     const nomeNovo = inputNome.value.trim() || "eu";
     localStorage.setItem("usuario-nome", nomeNovo);
@@ -61,7 +57,6 @@ btnEditar.addEventListener("click", () => {
     novoElemento.textContent = "@" + nomeNovo;
     inputNome.replaceWith(novoElemento);
 
-    // Atualizar na sala se aberto
     const user1 = document.getElementById("usuario-1");
     if (user1) {
       user1.querySelector(".user-name").textContent = nomeNovo;
@@ -69,7 +64,6 @@ btnEditar.addEventListener("click", () => {
   }
 });
 
-// ===================== ALTERAR BANNER =====================
 const bannerInput = document.getElementById("banner-input");
 
 iconBanner.addEventListener("click", () => bannerInput.click());
@@ -88,7 +82,6 @@ bannerInput.addEventListener("change", function () {
   }
 });
 
-// ===================== ALTERAR FOTO PERFIL =====================
 const pfpInput = document.getElementById("pfp-input");
 
 iconPfp.addEventListener("click", () => pfpInput.click());
@@ -103,7 +96,6 @@ pfpInput.addEventListener("change", function () {
 
       localStorage.setItem("pfp-img", e.target.result);
 
-      // Atualizar na sala se aberto
       const user1 = document.getElementById("usuario-1");
       if (user1) {
         user1.style.backgroundImage = `url('${e.target.result}')`;
@@ -112,3 +104,4 @@ pfpInput.addEventListener("change", function () {
     reader.readAsDataURL(file);
   }
 });
+
